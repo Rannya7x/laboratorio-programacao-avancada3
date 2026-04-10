@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "grafo.h"
+#include "include/grafo.h"
 
 int main(int argc, char *argv[]){
     //abre o arquivo
