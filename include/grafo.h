@@ -2,6 +2,14 @@
 #define GRAFO_H
 #include <stdbool.h>
 #include "lista_vizinhos.h"
+
+struct no_t {
+    int id;
+    double pos_x;
+    double pos_y;
+    lista_vizinhos_t *lista_vizinhos;
+};
+
 typedef struct no_t no_t;
 typedef no_t* grafo_t; 
 grafo_t grafo_criar(int tamanho);
