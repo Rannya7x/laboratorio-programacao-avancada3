@@ -38,7 +38,7 @@ int main(int argc, char *argv[]){
     //fecha o arquivo
     fclose(arquivo);
     //destroi o grafo
-    grafo_destruir(grafo, numero_nos);
+    grafo_destruir(numero_nos, grafo);
 
     return 0;
 }
