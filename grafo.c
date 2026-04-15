@@ -1,3 +1,4 @@
+#include "stdio.h"
 #include "stdlib.h"
 #include "math.h"
 #include "include/lista_vizinhos.h"
@@ -21,4 +22,18 @@ void grafo_atualizar_vizinhos(int tam, double raio_comunicacao, grafo_t grafo){
             }
         }
     }
+}
+
+void grafo_imprimir(int tam, grafo_t grafo){
+    for(int i = 0; i < tam; i++){
+        printf("No %d: ", grafo[i].id);
+        lista_vizinhos_imprimir(grafo[i].lista_vizinhos);
+    }
+}
+
+void grafo_destruir(int tam, grafo_t grafo){
+    for(int i = 0; i < tam; i++){
+        lista_vizinhos_destruir(grafo[i].lista_vizinhos);
+    }
+    free(grafo);
 }
